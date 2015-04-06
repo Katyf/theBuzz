@@ -15,22 +15,40 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'MainController',
+    'MainDirective'
   ])
     .constant('ServerUrl', 'http://localhost:3000')
     .constant('APIUrl', 'http://api.openweathermap.org/data/2.5/weather?q=')
-    .run(function(WeatherFactory) {
-      WeatherFactory.getWeather();
+    // .run(function(WeatherFactory){
+    //   WeatherFactory.getWeather();
+    // })
+    .run(function($rootScope, $http, $window, $location, AuthFactory){
+      if(AuthFactory.isAuthenticated()) {
+        var data = JSON.parse($window.localStorage.getItem('ga-user'));
+        $http.defaults.headers.common.Authorization = 'Token token=' + data.token;
+      } else {
+        $location.path('/login');
+      }
+
+      $rootScope.$on('$routeChangeStart', function(event, next){
+        if(!AuthFactory.isAuthenticated()){
+          $location.path('/login');
+        } else {
+          //WeatherFactory.getWeather();
+        }
+      });
     })
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
+        templateUrl: 'views/home.html',
+        controller: 'HomeController'
       })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
+      .when('/login', {
+        templateUrl: 'views/login.html',
+        controller: 'LoginController'
       })
       .otherwise({
         redirectTo: '/'

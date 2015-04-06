@@ -23,7 +23,7 @@
 
     <!-- Add your site or application content here -->
 
-    <div ng-view=""></div>
+    <div ng-view></div>
 
 
 
@@ -48,12 +48,19 @@
         <script src="scripts/filters/toF.js"></script>
         <script src="scripts/filters/weatherIcon.js"></script>
 
-        <script src="scripts/factories/WeatherFactory.js"></script>
+        <script src="scripts/factories/AuthFactory.js"></script>
+<!--         <script src="scripts/factories/WeatherFactory.js"></script>
+ -->
+        <script src="scripts/controllers/MainController.js"></script>
+        <script src="scripts/controllers/HomeController.js"></script>
+<!--         <script src="scripts/controllers/WeatherController.js"></script>
+ -->        <script src="scripts/controllers/LoginController.js"></script>
+        <script src="scripts/controllers/SignupController.js"></script>
 
-        <script src="scripts/controllers/main.js"></script>
-        <script src="scripts/controllers/about.js"></script>
-
-        <script src="scripts/directives/kfWeather.js"></script>
-        <!-- endbuild -->
+        <script src="scripts/directives/MainDirective.js"></script>
+        <script src="scripts/directives/LoginDirective.js"></script>
+        <script src="scripts/directives/SignupDirective.js"></script>
+<!--         <script src="scripts/directives/kfWeather.js"></script>
+ -->        <!-- endbuild -->
 </body>
 </html>

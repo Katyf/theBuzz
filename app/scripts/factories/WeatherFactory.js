@@ -1,51 +1,61 @@
-//var frontendApp = angular.module('frontendAapp', []);
+// (function() {
+//   'use strict';
 
-// frontendApp.factory('weatherService', function($http) {
-//     return {
-//       getWeather: function() {
-//         var weather = { temp: {}, clouds: null };
-//         $http.jsonp('http://api.openweathermap.org/data/2.5/weather?q=Salzburg,at&units=metric&callback=JSON_CALLBACK').success(function(data) {
-//             if (data) {
-//                 if (data.main) {
-//                     weather.temp.current = data.main.temp;
-//                     weather.temp.min = data.main.temp_min;
-//                     weather.temp.max = data.main.temp_max;
-//                 }
-//                 weather.clouds = data.clouds ? data.clouds.all : undefined;
-//             }
-//         });
+//   angular
+//     .module('frontendApp')
+//     .factory('WeatherFactory', WeatherFactory);
 
-//         return weather;
+//     WeatherFactory.$inject = ['$http', 'APIUrl'];
+
+//     function WeatherFactory($http, APIUrl) {
+//       var currentweather = {};
+
+//       function getWeather() {
+//         return $http.get(APIUrl + 'Boston,ma')
+//                 .then(function(response) {
+//                   console.log(response.data);
+//                     angular.copy(response.data, currentweather);
+//                 });
+//       }
+
+
+//       return {
+//         currentweather: currentweather,
+//         getWeather: getWeather
+//       };
+
+
+//     }
+
+// })();
+
+
+
+// 'use strict';
+
+// angular.module('frontendApp').factory('WeatherFactory', ['$http', '$window', 'APIUrl', function($http, $window, APIUrl){
+
+//   var currentweather = {};
+
+//   var getWeather = function(){
+//     var data = JSON.parse($window.localStorage.getItem('ga-user'));
+//     var config = {
+//       headers: {
+//         'AUTHORIZATION': 'Token token=' + data.token
 //       }
 //     };
-// });
-(function() {
-  'use strict';
 
-  angular
-    .module('frontendApp')
-    .factory('WeatherFactory', WeatherFactory);
+//     return $http.get(APIUrl + 'Boston,ma', config).success(function(response){
+//       console.log(response.data);
+//       angular.copy(response.data, currentweather);
+//     }).error(function(data, status, headers, config){
+//       console.log('Error:' + data, status, headers, config);
+//     });
+//   };
 
-    WeatherFactory.$inject = ['$http', 'APIUrl'];
+//   return {
+//     currentweather: currentweather,
+//     getWeather: getWeather
+//   };
 
-    function WeatherFactory($http, APIUrl) {
-      var currentweather = {};
-
-      function getWeather() {
-        return $http.get(APIUrl + 'Boston,ma')
-                .then(function(response) {
-                  console.log(response.data);
-                    angular.copy(response.data, currentweather);
-                });
-      }
-
-
-      return {
-        currentweather: currentweather,
-        getWeather: getWeather
-      };
-
-
-    }
-
-})();
+// }]);
