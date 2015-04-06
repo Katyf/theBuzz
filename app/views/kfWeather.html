@@ -1,0 +1,6 @@
+  <div ng-controller="WeatherController as weather">
+    <h2>Weather in Boston, MA</h2>
+    <weather-icon cloudiness="{{ weather.clouds }}"></weather-icon>
+    <h3>Current: {{ weather.temp.current | temp:2 }}</h3>
+    min: {{ weather.temp.min | temp }}, max: {{ weather.temp.max | temp }}
+</div>
