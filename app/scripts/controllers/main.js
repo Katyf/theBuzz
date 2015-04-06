@@ -9,8 +9,8 @@
 
     function MainCtrl(WeatherFactory) {
         var vm = this;
+        vm.currentweather = WeatherFactory.currentweather;
 
-        vm.weather = WeatherFactory.weather;
     }
 
 })();

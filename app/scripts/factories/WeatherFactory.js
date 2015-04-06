@@ -26,22 +26,22 @@
     .module('frontendApp')
     .factory('WeatherFactory', WeatherFactory);
 
-    WeatherFactory.$inject = ['$http', 'ServerUrl'];
+    WeatherFactory.$inject = ['$http', 'APIUrl'];
 
-    function WeatherFactory($http, ServerUrl) {
-      var weather = {};
+    function WeatherFactory($http, APIUrl) {
+      var currentweather = {};
 
       function getWeather() {
-        return $http.get('api.openweathermap.org/data/2.5/weather?q=' + 'Boston,ma')
+        return $http.get(APIUrl + 'Boston,ma')
                 .then(function(response) {
                   console.log(response.data);
-                    angular.copy(response.data, weather);
+                    angular.copy(response.data, currentweather);
                 });
       }
 
 
       return {
-        weather: weather,
+        currentweather: currentweather,
         getWeather: getWeather
       };
 

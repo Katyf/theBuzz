@@ -30,10 +30,8 @@
 
     kfWeatherCtrl.$inject = ['WeatherFactory'];
 
-    function kfWeatherCtrl(JobFactory) {
+    function kfWeatherCtrl(WeatherFactory) {
         var vm = this;
-        vm.getWeather = function(weather) {
-        };
     }
 
     function kfWeather() {
@@ -41,7 +39,7 @@
             restrict: 'E',
             templateUrl: 'views/kfWeather.html',
             scope: {
-                jobs: '='
+                weather: '='
             },
             controller: kfWeatherCtrl,
             controllerAs: 'kfWeatherCtrl',

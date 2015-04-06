@@ -17,6 +17,11 @@ angular
     'ngSanitize',
     'ngTouch'
   ])
+    .constant('ServerUrl', 'http://localhost:3000')
+    .constant('APIUrl', 'http://api.openweathermap.org/data/2.5/weather?q=')
+    .run(function(WeatherFactory) {
+      WeatherFactory.getWeather();
+    })
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
