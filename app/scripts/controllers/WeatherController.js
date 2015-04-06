@@ -1,12 +1,10 @@
-// 'use strict';
+'use strict';
 
-// angular
-//   .module('MainController')
-//   .controller('WeatherController', WeatherController);
+angular.module('MainController').controller('WeatherController', weatherController);
 
-// WeatherController.$inject = ['WeatherFactory'];
+weatherController.$inject = ['WeatherFactory'];
 
-// function weatherFactory(PostsFactory) {
-//   var vm = this;
-//   vm.currentweather = WeatherFactory.currentweather;
-// }
+function weatherController(WeatherFactory) {
+  var vm = this;
+  vm.currentweather = WeatherFactory.currentweather;
+}

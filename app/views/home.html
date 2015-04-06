@@ -1,7 +1,11 @@
-<!-- <div class="" ng-controller="WeatherCtrl as home">
+<div class="" ng-controller="WeatherController as weatherCtrl">
   <div class="col-md-6">
-    <kf-weather weather="home.currentweather"></kf-weather>
+    <kf-weather weather="weatherCtrl.currentweather"></kf-weather>
   </div>
 </div>
- -->
+<br>
+<div ng-controller="UserController as userController">
+  <user-items user="userController.user"></user-items>
+</div>
+
 <h1>Hello World</h1>

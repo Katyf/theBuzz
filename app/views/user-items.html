@@ -1,0 +1,15 @@
+<div class="">
+  <div class="" ng-controller="UserController as userController">
+    <p>Hello, {{ userController.user.name }}</p>
+
+    <div class="">
+      <h3>Notes:</h3>
+      <p>{{ userController.user.notes[0].body }}</p>
+    </div>
+
+    <div class="">
+      <h3>Links:</h3>
+      <p>{{ userController.user.links[0].url }}</p>
+    </div>
+  </div>
+</div>

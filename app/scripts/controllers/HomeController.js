@@ -19,8 +19,9 @@
 
 angular.module('MainController').controller('HomeController', homeController);
 
-homeController.$inject = [];
+homeController.$inject = ['WeatherFactory', 'UserFactory'];
 
-function homeController() {
-
-};
+function homeController(WeatherFactory, UserFactory) {
+  WeatherFactory.getWeather();
+  UserFactory.getUserItems();
+}

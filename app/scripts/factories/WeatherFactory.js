@@ -1,3 +1,27 @@
+'use strict';
+
+angular.module('frontendApp').factory('WeatherFactory', ['$http', '$window', 'APIUrl', function($http, $window, APIUrl){
+
+  var currentweather = {};
+
+  var getWeather = function(){
+
+    return $http.get(APIUrl + 'Boston,ma').success(function(response){
+      console.log(response);
+      //debugger;
+      angular.copy(response, currentweather);
+    }).error(function(data, status, headers, config){
+      console.log('Error:' + data, status, headers, config);
+    });
+  };
+
+  return {
+    currentweather: currentweather,
+    getWeather: getWeather
+  };
+
+}]);
+
 // (function() {
 //   'use strict';
 
@@ -28,34 +52,3 @@
 //     }
 
 // })();
-
-
-
-// 'use strict';
-
-// angular.module('frontendApp').factory('WeatherFactory', ['$http', '$window', 'APIUrl', function($http, $window, APIUrl){
-
-//   var currentweather = {};
-
-//   var getWeather = function(){
-//     var data = JSON.parse($window.localStorage.getItem('ga-user'));
-//     var config = {
-//       headers: {
-//         'AUTHORIZATION': 'Token token=' + data.token
-//       }
-//     };
-
-//     return $http.get(APIUrl + 'Boston,ma', config).success(function(response){
-//       console.log(response.data);
-//       angular.copy(response.data, currentweather);
-//     }).error(function(data, status, headers, config){
-//       console.log('Error:' + data, status, headers, config);
-//     });
-//   };
-
-//   return {
-//     currentweather: currentweather,
-//     getWeather: getWeather
-//   };
-
-// }]);

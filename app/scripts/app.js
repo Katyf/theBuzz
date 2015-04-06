@@ -21,13 +21,11 @@ angular
   ])
     .constant('ServerUrl', 'http://localhost:3000')
     .constant('APIUrl', 'http://api.openweathermap.org/data/2.5/weather?q=')
-    // .run(function(WeatherFactory){
-    //   WeatherFactory.getWeather();
-    // })
+    .constant('UserId', '1')
     .run(function($rootScope, $http, $window, $location, AuthFactory){
       if(AuthFactory.isAuthenticated()) {
         var data = JSON.parse($window.localStorage.getItem('ga-user'));
-        $http.defaults.headers.common.Authorization = 'Token token=' + data.token;
+        //$http.defaults.headers.common.Authorization = 'Token token=' + data.token;
       } else {
         $location.path('/login');
       }
@@ -36,7 +34,7 @@ angular
         if(!AuthFactory.isAuthenticated()){
           $location.path('/login');
         } else {
-          //WeatherFactory.getWeather();
+          $location.path('/');
         }
       });
     })
