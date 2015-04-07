@@ -1,22 +1,18 @@
 <div class="user-items">
   <div class="" ng-controller="UserController as userController">
-    <p>Hello, {{ userController.user.name }}</p>
-
     <div class="uitem">
-      <h3>Notes:</h3>
-      <p ng-repeat="note in userController.user.notes">{{ note.body }}</p>
-      <button type="button" class="btn btn-default" aria-label="Left Align" ng-click="shownote = !shownote">
+      <button type="button" class="btn btn-xs" aria-label="Left Align" ng-click="shownote = !shownote">
          <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-      </button>
+      </button><h4>Notes:</h4>
+      <p ng-repeat="note in userController.user.notes">{{ note.body }}</p>
       <ng-include src="'views/partials/new-note-form.html'" ng-show="shownote"></ng-include>
     </div>
 
     <div class="uitem">
-      <h3>Links:</h3>
-      <p ng-repeat="link in userController.user.links"><a href="http://{{link.url}}" target="_blank">{{ link.url | urlFilter }}</a></p>
-      <button type="button" class="btn btn-default" aria-label="Left Align" ng-click="showlink = !showlink">
+      <button type="button" class="btn btn-xs" aria-label="Left Align" ng-click="showlink = !showlink">
          <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-      </button>
+      </button><h4>Links:</h4>
+      <p ng-repeat="link in userController.user.links"><a href="http://{{link.url}}" target="_blank">{{ link.url | urlFilter }}</a></p>
       <ng-include src="'views/partials/new-link-form.html'" ng-show="showlink"></ng-include>
     </div>
   </div>

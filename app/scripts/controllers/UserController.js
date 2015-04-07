@@ -14,6 +14,7 @@ function userController(UserFactory) {
     UserFactory.newNote(note).then(function(response){
         vm.note = {};
         console.log('hi from userController.newNote');
+        UserFactory.getUserItems();
     });
   };
 
@@ -21,6 +22,7 @@ function userController(UserFactory) {
     UserFactory.newLink(link).then(function(response){
       vm.link = {};
       console.log('hi from userController.newLink');
+      UserFactory.getUserItems();
     });
   };
 

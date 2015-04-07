@@ -1,6 +1,6 @@
 <div class="weather" ng-controller="WeatherController as weatherCtrl">
   <i id="main-icon" class="wi wi-{{weatherCtrl.currentweather.clouds.all | weatherIcon}}"></i>
-    <p class="weather">{{ weatherCtrl.currentweather.main.temp | toF }}<i class="wi wi-degrees"></i><br>
-    {{weatherCtrl.currentweather.name}}</p>
+    <p class="weather">{{ weatherCtrl.currentweather.main.temp | toF }}<i class="wi wi-degrees"></i></p>
+    <p>{{weatherCtrl.currentweather.name}}</p>
 </div>
 
