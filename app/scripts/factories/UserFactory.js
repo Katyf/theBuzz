@@ -37,8 +37,13 @@ angular.module('frontendApp').factory('UserFactory', ['$http', 'ServerUrl', func
 
   };
 
-  var newLink = function(){
-
+  var newLink = function(link){
+    setUserId();
+    var params = {link: link};
+    return $http.post(ServerUrl + '/users/' + userId + '/links', params).success(function(response){
+      console.log(response);
+      console.log('Link created! Hello from UserFactory.newLink');
+    });
   };
 
   var deleteLink = function(){

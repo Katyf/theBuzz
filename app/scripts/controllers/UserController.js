@@ -20,6 +20,7 @@ function userController(UserFactory) {
   vm.newLink = function(link) {
     UserFactory.newLink(link).then(function(response){
       vm.link = {};
+      console.log('hi from userController.newLink');
     });
   };
 

@@ -8,6 +8,9 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
     margin-top: 2px;
   }
 
+  .user-items {
+    padding-left: 30px;
+  }
   .uitem {
     width: 50%;
   }
@@ -37,7 +40,7 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 }
 
 body {
-  padding: 0;
+  padding: 10px;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */

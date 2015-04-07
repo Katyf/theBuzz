@@ -13,7 +13,7 @@
 
     <div class="uitem">
       <h3>Links:</h3>
-      <p ng-repeat="link in userController.user.links">{{ link.url }}</p>
+      <p ng-repeat="link in userController.user.links"><a href="http://{{link.url}}" target="_blank">{{ link.url | urlFilter }}</a></p>
       <button type="button" class="btn btn-default" aria-label="Left Align" ng-click="showlink = !showlink">
          <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
       </button>

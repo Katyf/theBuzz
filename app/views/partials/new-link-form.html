@@ -1,11 +1,11 @@
- <form name="linkForm">
+ <form name="linkForm" ng-submit="userController.newLink(userController.link)">
   <blockquote>
-    <a href= "{{link.url}}"> {{link.url}}</a>
+    <a href= "{{userController.link.url}}"> {{userController.link.url}}</a>
   </blockquote>
 
   <h4>New Link:</h4>
   <fieldset class="form-group">
-    <input type="text" ng-model="link.url" class="form-control" placeholder="Ex. google.com" title="note-body"></textarea>
+    <input type="text" ng-model="userController.link.url" class="form-control" placeholder="Ex. google.com" title="note-body"></textarea>
   </fieldset>
   <fieldset class="form-group">
     <input type="submit" class="btn btn-primary" value="Submit" />
