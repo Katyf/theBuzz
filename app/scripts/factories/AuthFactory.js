@@ -4,8 +4,9 @@ angular.module('frontendApp').factory('AuthFactory', ['$http', '$window', 'Serve
 
   var signup = function(credentials) {
     console.log(credentials);
-    return $http.post(ServerUrl + '/users').success(function(response){
+    return $http.post(ServerUrl + '/users', credentials).success(function(response){
       _storeSession(response);
+      console.log('success!');
     });
   };
   var login = function(credentials){

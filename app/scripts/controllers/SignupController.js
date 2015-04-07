@@ -8,7 +8,7 @@ function signupController(AuthFactory, $location) {
   var vm = this;
 
   vm.signup = function(credentials){
-    AuthFactory.signup(credentials).then(function(response){
+    AuthFactory.signup({ user: credentials }).then(function(response){
       vm.credentials = {};
       $location.path('/');
     });

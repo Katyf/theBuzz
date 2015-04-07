@@ -13,4 +13,5 @@ function loginController(AuthFactory, $location) {
       $location.path('/');
     });
   };
+
 }
