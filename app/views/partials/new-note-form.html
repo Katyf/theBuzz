@@ -1,0 +1,13 @@
+ <form name="noteForm" ng-submit="userController.newNote(userController.note)">
+  <blockquote>
+    {{userController.note.body}}
+  </blockquote>
+
+  <h4>New Note:</h4>
+  <fieldset class="form-group">
+    <textarea ng-model="userController.note.body" class="form-control" placeholder="Write something..." title="note-body"></textarea>
+  </fieldset>
+  <fieldset class="form-group">
+    <input type="submit" class="btn btn-primary" value="Submit" />
+  </fieldset>
+</form>

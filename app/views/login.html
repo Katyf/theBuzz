@@ -1,5 +1,53 @@
 <br><br>
 <div class="container">
-<login-form></login-form>
-<signup-form></signup-form>
+  <h1 class="login-welcome">Welcome to Dash</h1>
+  <p class="login-welcome">Please Log In</p>
+  <div class="form-box" ng-controller="TabController as tab">
+    <ul class="nav nav-tabs">
+      <li ng-class="{ active:tab.isSet(1) }"><a href="" ng-click="tab.setTab(1)">Login</a></li>
+      <li ng-class="{ active:tab.isSet(2) }"><a href="" ng-click="tab.setTab(2)">Sign Up</a></li>
+    </ul>
+    <div ng-show="tab.isSet(1)">
+      <login-form></login-form>
+    </div>
+    <div ng-show="tab.isSet(2)">
+       <signup-form></signup-form>
+    </div>
+  </div>
 </div>
+
+
+
+
+       <!--  <section ng-controller="TabController as tab">
+          <ul class="nav nav-pills">
+            <li ng-class="{ active:tab.isSet(1) }">
+              <a href="" ng-click="tab.setTab(1)">Description</a>
+            </li>
+            <li ng-class="{ active:tab.isSet(2) }">
+              <a href="" ng-click="tab.setTab(2)">Specs</a>
+            </li>
+            <li ng-class="{ active:tab.isSet(3) }">
+              <a href="" ng-click="tab.setTab(3)">Reviews</a>
+            </li>
+          </ul>
+          <div ng-show="tab.isSet(1)">
+            <h4>Description</h4>
+            <blockquote>{{product.description}}</blockquote>
+          </div>
+          <div ng-show="tab.isSet(2)">
+            <h4>Specs</h4>
+            <blockquote>Shine: {{product.shine}}</blockquote>
+          </div> -->
+          <!--  Review Tab's Content
+          <div ng-show="tab.isSet(3)">
+
+            <ul>
+              <h4>Reviews</h4>
+              <li ng-repeat="review in product.reviews">
+                <blockquote>
+                  <strong>{{review.stars}} Stars</strong>
+                  {{review.body}}
+                  <cite class="clearfix">—{{review.author}}</cite>
+                </blockquote>
+              </li> -->

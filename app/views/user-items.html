@@ -2,48 +2,24 @@
   <div class="" ng-controller="UserController as userController">
     <p>Hello, {{ userController.user.name }}</p>
 
-    <div class="">
+    <div class="uitem">
       <h3>Notes:</h3>
       <p ng-repeat="note in userController.user.notes">{{ note.body }}</p>
+      <button type="button" class="btn btn-default" aria-label="Left Align" ng-click="shownote = !shownote">
+         <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+      </button>
+      <ng-include src="'views/partials/new-note-form.html'" ng-show="shownote"></ng-include>
     </div>
 
-    <div class="">
+    <div class="uitem">
       <h3>Links:</h3>
       <p ng-repeat="link in userController.user.links">{{ link.url }}</p>
+      <button type="button" class="btn btn-default" aria-label="Left Align" ng-click="showlink = !showlink">
+         <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+      </button>
+      <ng-include src="'views/partials/new-link-form.html'" ng-show="showlink"></ng-include>
     </div>
   </div>
 </div>
 
 
-       <!--  <section ng-controller="TabController as tab">
-          <ul class="nav nav-pills">
-            <li ng-class="{ active:tab.isSet(1) }">
-              <a href="" ng-click="tab.setTab(1)">Description</a>
-            </li>
-            <li ng-class="{ active:tab.isSet(2) }">
-              <a href="" ng-click="tab.setTab(2)">Specs</a>
-            </li>
-            <li ng-class="{ active:tab.isSet(3) }">
-              <a href="" ng-click="tab.setTab(3)">Reviews</a>
-            </li>
-          </ul>
-          <div ng-show="tab.isSet(1)">
-            <h4>Description</h4>
-            <blockquote>{{product.description}}</blockquote>
-          </div>
-          <div ng-show="tab.isSet(2)">
-            <h4>Specs</h4>
-            <blockquote>Shine: {{product.shine}}</blockquote>
-          </div> -->
-          <!--  Review Tab's Content
-          <div ng-show="tab.isSet(3)">
-
-            <ul>
-              <h4>Reviews</h4>
-              <li ng-repeat="review in product.reviews">
-                <blockquote>
-                  <strong>{{review.stars}} Stars</strong>
-                  {{review.body}}
-                  <cite class="clearfix">—{{review.author}}</cite>
-                </blockquote>
-              </li> -->

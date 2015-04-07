@@ -21,7 +21,6 @@ angular
   ])
     .constant('ServerUrl', 'http://localhost:3000')
     .constant('APIUrl', 'http://api.openweathermap.org/data/2.5/weather?q=')
-    .constant('UserId', '1')
     .run(function($rootScope, $http, $window, $location, AuthFactory){
       if(AuthFactory.isAuthenticated()) {
         var data = JSON.parse($window.localStorage.getItem('ga-user'));

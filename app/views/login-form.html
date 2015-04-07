@@ -3,13 +3,14 @@
   <form id="login-form" name="loginForm" ng-submit="loginController.login(loginController.credentials)" novalidate>
 
     <div class="form-group">
-      <label id="email-label" for="email">Email: </label>
-      <input id="email" type="text" name="email" ng-model="loginController.credentials.email" required>
+      <br>
+      <label id="email-label" for="email">Email</label><br>
+      <input id="email" class="form-control" type="text" name="email" ng-model="loginController.credentials.email" required>
     </div>
 
     <div class="form-group">
-      <label id="password-label" for="password">Password: </label>
-      <input id="password" type="password" name="password" ng-model="loginController.credentials.password" required>
+      <label id="password-label" for="password">Password</label><br>
+      <input id="password" class="form-control" type="password" name="password" ng-model="loginController.credentials.password" required>
     </div>
 
     <div class="form-group">
