@@ -8,9 +8,9 @@
           <div class="btn-group">
             <button class="btn btn-info dropdown-toggle" data-toggle="dropdown" tabindex="-1"><span class="caret"></span></button>
             <ul class="dropdown-menu">
-              <li><a href="#" ng-click="feedSrc='http://feeds.huffingtonpost.com/huffingtonpost/raw_feed';loadFeed($event)">In the Know</a></li>
-              <li><a href="#" ng-click="feedSrc='http://www.buzzfeed.com/lol.xml';loadFeed($event)">Lols</a></li>
-              <li ng-repeat="feed in rssReaderController.user.feeds" ng-hide="removefeed"><a href="#" ng-click="feedSrc='{{feed.url}}';loadFeed($event)">{{ feed.name }} | {{feed.category}}</a><a ng-click="userController.deleteFeed(feed); removefeed = true">del</a></li>
+              <li><a href="#" ng-click="rssReaderController.loadFeed($event,'http://feeds.huffingtonpost.com/huffingtonpost/raw_feed')">In the Know</a></li>
+              <li><a href="#" ng-click="rssReaderController.loadFeed($event,'http://www.buzzfeed.com/lol.xml')">Lols</a></li>
+              <li ng-repeat="userfeed in rssReaderController.user.feeds" ng-hide="removefeed"><a href="#" ng-click="rssReaderController.loadFeed($event,'{{userfeed.url}}')">{{ userfeed.name }} | {{userfeed.category}}</a><a ng-click="">del</a></li>
               <li><a href="#" ng-click="">Add Your Own RSS Feed</a></li>
             </ul>
           </div>
