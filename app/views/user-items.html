@@ -4,7 +4,7 @@
       <button type="button" class="btn btn-xs" aria-label="Left Align" ng-click="shownote = !shownote">
          <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
       </button><h4>Notes:</h4>
-      <p ng-repeat="note in userController.user.notes">{{ note.body }}</p>
+      <p ng-repeat="note in userController.user.notes" ng-hide="removenote">{{ note.body }}<a ng-click="userController.deleteNote(note); removenote = true">delete</a></p>
       <ng-include src="'views/partials/new-note-form.html'" ng-show="shownote"></ng-include>
     </div>
 
@@ -12,7 +12,7 @@
       <button type="button" class="btn btn-xs" aria-label="Left Align" ng-click="showlink = !showlink">
          <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
       </button><h4>Links:</h4>
-      <p ng-repeat="link in userController.user.links"><a href="http://{{link.url}}" target="_blank">{{ link.url | urlFilter }}</a></p>
+      <p ng-repeat="link in userController.user.links" ng-hide="removelink"><a href="http://{{link.url}}" target="_blank">{{ link.url | urlFilter }}</a> <a ng-click="userController.deleteLink(link); removelink = true">delete</a></p>
       <ng-include src="'views/partials/new-link-form.html'" ng-show="showlink"></ng-include>
     </div>
 
@@ -20,8 +20,8 @@
       <button type="button" class="btn btn-xs" aria-label="Left Align" ng-click="showfeed = !showfeed">
          <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
       </button><h4>Feeds</h4>
-      <div ng-repeat="feed in userController.user.feeds"><p>{{ feed.name }} | {{feed.category}}</p><p> {{feed.url}}</p>
-      <a ng-click="userController.deleteFeed(feed)">delete</a></li></div>
+      <div ng-repeat="feed in userController.user.feeds" ng-hide="removefeed"><p>{{ feed.name }} | {{feed.category}}</p><p> {{feed.url}} <a ng-click="userController.deleteFeed(feed); removefeed = true">delete</a></p>
+      </div>
       <ng-include src="'views/partials/new-feed-form.html'" ng-show="showfeed"></ng-include>
     </div>
 

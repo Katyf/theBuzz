@@ -17,7 +17,8 @@ angular
     'ngSanitize',
     'ngTouch',
     'MainController',
-    'MainDirective'
+    'MainDirective',
+    'drag-and-drop'
   ])
     .constant('ServerUrl', 'http://localhost:3000')
     .constant('APIUrl', 'http://api.openweathermap.org/data/2.5/weather?q=')

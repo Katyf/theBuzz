@@ -17,6 +17,10 @@ function userController(UserFactory) {
         UserFactory.getUserItems();
     });
   };
+  vm.deleteNote = function(note){
+    UserFactory.deleteNote(note);
+    console.log('hi from UserController.deleteNote');
+  };
 
   vm.newLink = function(link) {
     UserFactory.newLink(link).then(function(response){
@@ -24,6 +28,11 @@ function userController(UserFactory) {
       console.log('hi from userController.newLink');
       UserFactory.getUserItems();
     });
+  };
+
+  vm.deleteLink = function(link){
+    UserFactory.deleteLink(link);
+    console.log('hi from UserController.deleteLink');
   };
 
   vm.newFeed = function(feedparams) {

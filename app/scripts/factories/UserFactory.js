@@ -33,7 +33,10 @@ angular.module('frontendApp').factory('UserFactory', ['$http', 'ServerUrl', func
     });
   };
 
-  var deleteNote = function(){
+  var deleteNote = function(note){
+    return $http.delete(ServerUrl + '/users/' + userId + '/notes/' + note.id).success(function(){
+      console.log('note deleted');
+    });
   };
 
   var newLink = function(link){
@@ -45,7 +48,10 @@ angular.module('frontendApp').factory('UserFactory', ['$http', 'ServerUrl', func
     });
   };
 
-  var deleteLink = function(){
+  var deleteLink = function(link){
+    return $http.delete(ServerUrl + '/users/' + userId + '/links/' + link.id).success(function(){
+      console.log('link deleted');
+    });
   };
 
   var newFeed = function(feedparams){
