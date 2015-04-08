@@ -1,14 +1,30 @@
 #rss-feed {
+  min-height: 200px;
+  ul#rss-dropdown {
+    min-width: 200px;
+  }
   ul.unstyled {
     list-style: none;
   }
-  min-height: 200px;
+  .rssbtn {
+    float: right;
+    margin-right: 15px;
+    padding: 1px 4px;
+    font-size: 10px;
+  }
+
+}
+
+p.user-feed {
+  padding-left:20px;
 }
 
 .uitem {
   width: 30%;
-  max-height: 500px;
-  overflow: scroll;
+  .inner {
+    max-height: 500px;
+    overflow: scroll;
+  }
   -webkit-box-shadow: 0px 0px 5px 2px rgba(148,145,148,0.8);
   -moz-box-shadow: 0px 0px 5px 2px rgba(148,145,148,0.8);
   box-shadow: 0px 0px 5px 2px rgba(148,145,148,0.8);
@@ -20,8 +36,14 @@
     margin-left: 5px;
     font-size: 16px;
   }
-  p {
+  p.note-link {
     padding-top: 10px;
     padding-left: 25px;
+    .delete-btn {
+      margin-right: 5px;
+      padding: 1px 4px;
+      font-size: 10px;
+    }
   }
+
 }

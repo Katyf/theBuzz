@@ -4,7 +4,10 @@
       <button type="button" class="btn btn-xs" aria-label="Left Align" ng-click="shownote = !shownote">
          <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
       </button><h4>Notes:</h4>
-      <p ng-repeat="note in userController.user.notes" ng-hide="removenote">{{ note.body }}<a ng-click="userController.deleteNote(note); removenote = true">delete</a></p>
+      <p class="note-link" ng-repeat="note in userController.user.notes" ng-hide="removenote">
+        <button type="button" class="btn btn-xs delete-btn" ng-click="userController.deleteNote(note); removenote = true">
+          <span class="glyphicon glyphicon-minus"></span>
+        </button>{{ note.body }}</p>
       <ng-include src="'views/partials/new-note-form.html'" ng-show="shownote"></ng-include>
     </div>
 
@@ -12,7 +15,12 @@
       <button type="button" class="btn btn-xs" aria-label="Left Align" ng-click="showlink = !showlink">
          <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
       </button><h4>Links:</h4>
-      <p ng-repeat="link in userController.user.links" ng-hide="removelink"><a href="http://{{link.url}}" target="_blank">{{ link.url | urlFilter }}</a> <a ng-click="userController.deleteLink(link); removelink = true">delete</a></p>
+      <p class="note-link" ng-repeat="link in userController.user.links" ng-hide="removelink">
+      <button type="button" class="btn btn-xs delete-btn" ng-click="userController.deleteLink(link); removelink = true">
+        <span class="glyphicon glyphicon-minus"></span>
+      </button>
+      <a href="http://{{link.url}}" target="_blank">{{ link.url | urlFilter }}</a>
+      </p>
       <ng-include src="'views/partials/new-link-form.html'" ng-show="showlink"></ng-include>
     </div>
 

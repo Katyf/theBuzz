@@ -18,7 +18,8 @@ angular
     'ngTouch',
     'MainController',
     'MainDirective',
-    'drag-and-drop'
+    'drag-and-drop',
+    'ui.bootstrap'
   ])
     .constant('ServerUrl', 'http://localhost:3000')
     .constant('APIUrl', 'http://api.openweathermap.org/data/2.5/weather?q=')
