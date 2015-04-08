@@ -6,6 +6,13 @@ nav {
   text-align: center;
 }
 
+#rss {
+  width: 30%;
+  ul.unstyled {
+    list-style: none;
+  }
+}
+
 .weather-div {
   float: right;
   margin-top: -50px;

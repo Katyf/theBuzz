@@ -1,5 +1,5 @@
 <div class="rss">
-  <div data-ng-controller="RssController">
+  <div data-ng-controller="RssReaderController">
     <div class="">
       <h4>Rss Feed</h4>
       <form>
@@ -8,7 +8,9 @@
           <div class="btn-group">
             <button class="btn btn-info dropdown-toggle" data-toggle="dropdown" tabindex="-1"><span class="caret"></span></button>
             <ul class="dropdown-menu">
-              <li><a href="#" ng-click="feedSrc='http://feeds.huffingtonpost.com/huffingtonpost/raw_feed';loadFeed($event)">HuffPost</a></li>
+              <li><a href="#" ng-click="feedSrc='http://feeds.huffingtonpost.com/huffingtonpost/raw_feed';loadFeed($event)">In the Know</a></li>
+              <li><a href="#" ng-click="feedSrc='http://www.buzzfeed.com/lol.xml';loadFeed($event)">Lols</a></li>
+              <li><a href="#" ng-click="">Add Your Own RSS Feed</a></li>
             </ul>
           </div>
 

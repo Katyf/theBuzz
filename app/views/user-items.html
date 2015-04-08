@@ -17,6 +17,15 @@
     </div>
 
     <div class="uitem">
+      <button type="button" class="btn btn-xs" aria-label="Left Align" ng-click="showfeed = !showfeed">
+         <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+      </button><h4>Feeds</h4>
+      <div ng-repeat="feed in userController.user.feeds"><p>{{ feed.name }} | {{feed.category}}</p><p> {{feed.url}}</p>
+      <a ng-click="userController.deleteFeed(feed)">delete</a></li></div>
+      <ng-include src="'views/partials/new-feed-form.html'" ng-show="showfeed"></ng-include>
+    </div>
+
+    <div class="uitem" id="rss-feed">
       <ng-include src="'views/rss-feed.html'"></ng-include>
     </div>
 

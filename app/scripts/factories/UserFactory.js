@@ -34,7 +34,6 @@ angular.module('frontendApp').factory('UserFactory', ['$http', 'ServerUrl', func
   };
 
   var deleteNote = function(){
-
   };
 
   var newLink = function(link){
@@ -47,7 +46,21 @@ angular.module('frontendApp').factory('UserFactory', ['$http', 'ServerUrl', func
   };
 
   var deleteLink = function(){
+  };
 
+  var newFeed = function(feedparams){
+    setUserId();
+    console.log(feedparams);
+    return $http.post(ServerUrl + '/users/' + userId + '/feeds', feedparams).success(function(response){
+      console.log(response);
+      console.log('Feed Created! Hi from UserFactory.newFeed');
+    });
+
+  };
+  var deleteFeed = function(feed){
+    return $http.delete(ServerUrl + '/users/' + userId + '/feeds/' + feed.id).success(function(){
+      console.log('feed deleted');
+    });
   };
 
   return {
@@ -57,7 +70,9 @@ angular.module('frontendApp').factory('UserFactory', ['$http', 'ServerUrl', func
     newNote: newNote,
     deleteNote: deleteNote,
     newLink: newLink,
-    deleteLink: deleteLink
+    deleteLink: deleteLink,
+    newFeed: newFeed,
+    deleteFeed: deleteFeed
   };
 
 }]);

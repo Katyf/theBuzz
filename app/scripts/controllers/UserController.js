@@ -26,4 +26,17 @@ function userController(UserFactory) {
     });
   };
 
+  vm.newFeed = function(feedparams) {
+    UserFactory.newFeed({feed: feedparams}).then(function(response){
+      vm.feedparams = {};
+      console.log('hi from userController.newFeed');
+      UserFactory.getUserItems();
+    });
+  };
+
+  vm.deleteFeed = function(feed){
+    UserFactory.deleteFeed(feed);
+    console.log('hi from UserController.deleteFeed');
+  };
+
 }

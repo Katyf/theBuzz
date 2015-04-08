@@ -1,0 +1,21 @@
+ <form name="feedForm" ng-submit="userController.newFeed(userController.feedparams)">
+  <blockquote>
+    <a href= "{{userController.feed.name}}"> {{userController.feedparams.name}}</a> |
+    <a href= "{{userController.feed.category}}"> {{userController.feedparams.category}}</a>
+  </blockquote>
+
+  <h4>New Feed:</h4>
+  <fieldset class="form-group">
+    <input type="text" ng-model="userController.feedparams.name" class="form-control" placeholder="Ex. HuffPost" title="feed-name"/>
+  </fieldset>
+  <fieldset class="form-group">
+    <input type="text" ng-model="userController.feedparams.category" class="form-control" placeholder="Ex. News" title="feed-category"/>
+  </fieldset>
+  <fieldset class="form-group">
+    <input type="text" ng-model="userController.feedparams.url" class="form-control" placeholder="http://..." title="feed-url"/>
+  </fieldset>
+  <fieldset class="form-group">
+    <input type="submit" class="btn btn-primary" value="Submit" />
+  </fieldset>
+</form>
+

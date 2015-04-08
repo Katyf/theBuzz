@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('frontendApp').factory('RssFactory', ['$http', function($http){
+angular.module('frontendApp').factory('RssReaderFactory', ['$http', function($http){
 
   return {
         parseFeed : function(url){
