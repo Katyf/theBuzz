@@ -6,6 +6,11 @@ nav {
   text-align: center;
 }
 
+.rss {
+  float: right;
+  margin: 10px;
+}
+
 .weather-div {
   float: right;
   margin-top: -50px;
@@ -65,6 +70,7 @@ nav {
     font-size: 16px;
   }
   p {
+    padding-top: 10px;
     padding-left: 25px;
   }
 }
