@@ -6,7 +6,13 @@
    <span class="caret"></span>
       </a>
       <ul class="dropdown-menu" role="menu">
-        <li><a href="">thing1</a></li>
+        <li class="dropdown-submenu">
+          <a tabindex="-1" href="#">Themes</a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="">Light</a></li>
+            <li><a href="">Dark</a></li>
+          </ul>
+        </li>
         <li><a href="">thing2</a></li>
         <li><a ng-click="menuController.logout()">Logout</a></li>
       </ul>
@@ -17,3 +23,4 @@
     <p>Hello, {{ userController.user.name }}</p>
   </div>
 </nav>
+

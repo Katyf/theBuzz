@@ -1,5 +1,5 @@
 <div class="rss">
-  <div data-ng-controller="RssReaderController">
+  <div data-ng-controller="RssReaderController as rssReaderController">
     <div class="">
       <h4>Rss Feed</h4>
       <form>
@@ -10,6 +10,7 @@
             <ul class="dropdown-menu">
               <li><a href="#" ng-click="feedSrc='http://feeds.huffingtonpost.com/huffingtonpost/raw_feed';loadFeed($event)">In the Know</a></li>
               <li><a href="#" ng-click="feedSrc='http://www.buzzfeed.com/lol.xml';loadFeed($event)">Lols</a></li>
+              <li ng-repeat="feed in rssReaderController.user.feeds" ng-hide="removefeed"><a href="#" ng-click="feedSrc='{{feed.url}}';loadFeed($event)">{{ feed.name }} | {{feed.category}}</a><a ng-click="userController.deleteFeed(feed); removefeed = true">del</a></li>
               <li><a href="#" ng-click="">Add Your Own RSS Feed</a></li>
             </ul>
           </div>
@@ -24,7 +25,7 @@
         <span class="badge badge-warning" ng-show="feeds.length > 0">{{(feeds | filter:filterText).length}} Items</span>
         <li ng-repeat="feed in feeds | filter:filterText">
           <h5><a href="{{feed.link}}">{{feed.title}}</a></h5>
-          <p class="text-left">{{feed.contentSnippet}}</p>
+          <p class="text-left">{{feed.contentSnippet | xmlFilter }}</p>
           <span class="small">{{feed.publishedDate}}</span>
         </li>
       </ul>

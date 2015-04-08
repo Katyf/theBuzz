@@ -22,7 +22,6 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <ng-include src="'views/partials/greeting.html'" ng-hide="!isAuthenticated"></ng-include>
     <div ng-view></div>
 
 
@@ -54,12 +53,12 @@
         <script src="scripts/filters/toF.js"></script>
         <script src="scripts/filters/weatherIcon.js"></script>
         <script src="scripts/filters/urlFilter.js"></script>
+        <script src="scripts/filters/xmlFilter.js"></script>
 
         <script src="scripts/factories/AuthFactory.js"></script>
         <script src="scripts/factories/WeatherFactory.js"></script>
         <script src="scripts/factories/UserFactory.js"></script>
         <script src="scripts/factories/RssReaderFactory.js"></script>
-        <script src="scripts/factories/RssFeedFactory.js"></script>
 
         <script src="scripts/controllers/MainController.js"></script>
         <script src="scripts/controllers/HomeController.js"></script>
@@ -70,7 +69,6 @@
         <script src="scripts/controllers/MenuController.js"></script>
         <script src="scripts/controllers/TabController.js"></script>
         <script src="scripts/controllers/RssReaderController.js"></script>
-        <script src="scripts/controllers/RssFeedController.js"></script>
 
         <script src="scripts/directives/MainDirective.js"></script>
         <script src="scripts/directives/LoginDirective.js"></script>
