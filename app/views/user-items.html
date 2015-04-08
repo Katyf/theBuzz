@@ -15,7 +15,13 @@
       <p ng-repeat="link in userController.user.links"><a href="http://{{link.url}}" target="_blank">{{ link.url | urlFilter }}</a></p>
       <ng-include src="'views/partials/new-link-form.html'" ng-show="showlink"></ng-include>
     </div>
+
+    <div class="uitem">
+      <ng-include src="'views/rss-feed.html'"></ng-include>
+    </div>
+
   </div>
+
 </div>
 
 

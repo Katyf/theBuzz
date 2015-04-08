@@ -1,16 +1,19 @@
 <ng-include src="'views/partials/menu.html'"></ng-include>
+
 <div class="" ng-controller="WeatherController as weatherCtrl">
   <div class="weather-div">
     <kf-weather weather="weatherCtrl.currentweather"></kf-weather>
   </div>
 </div>
+
 <br>
+
 <div>
-<div ng-controller="UserController as userController">
-  <user-items user="userController.user"></user-items>
-  <ng-include src="'views/rss-feed.html'"></ng-include>
+  <div ng-controller="UserController as userController">
+   <user-items user="userController.user"></user-items>
+  </div>
 </div>
-</div>
+
 <h1>Hello World</h1>
 
 
