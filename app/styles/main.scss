@@ -7,7 +7,7 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 @import "partials/login";
 @import "partials/weather";
 @import "partials/useritem";
-@import "partials/greeting";
+@import "partials/weather";
 
 h1 {
   text-align: center;
@@ -27,7 +27,7 @@ nav {
 }
 
 .home {
-  height: 100%;
+  height: 100vh;
 }
 
 body {
