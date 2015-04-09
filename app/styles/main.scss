@@ -7,10 +7,12 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 @import "partials/weather";
 @import "partials/useritem";
 @import "partials/greeting";
+@import "partials/themes";
 
 
 nav {
   text-align: center;
+  display: inline-block;
 }
 
 .browsehappy {
@@ -24,7 +26,6 @@ body {
   padding: 0px;
   font-family: 'Lato', sans-serf;
 }
-
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {

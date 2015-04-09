@@ -1,6 +1,23 @@
-<!-- <ng-include src="'views/partials/greeting.html'"></ng-include> -->
-<ng-include src="'views/partials/menu.html'"></ng-include>
-<ng-include src="'views/drag.html'"></ng-include>
+
+<!-- <ng-include src="'views/greeting.html'"></ng-include>
+ -->
+<div ng-class="{ 'dark': dark }">
+<nav class="inline">
+  <ng-include src="'views/partials/menu.html'"></ng-include>
+  <ul class="nav nav-pills">
+    <li role="presentation" class="dropdown">
+      <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
+        <i class="fa fa-paint-brush"></i><span class="caret"></span>
+      </a>
+      <ul class="dropdown-menu" role="menu">
+        <li><a ng-click="dark=false">Light</a></li>
+        <li><a ng-click="dark=true">Dark</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
 
 <div class="" ng-controller="WeatherController as weatherCtrl">
   <div class="weather-div">
@@ -17,5 +34,4 @@
 </div>
 
 <h1>Hello World</h1>
-
-
+</div>

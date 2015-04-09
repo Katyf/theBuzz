@@ -15,17 +15,16 @@
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="weather-icons/css/weather-icons.css">
     <link rel="stylesheet" type="text/css" href="bower_components/weather-icons/css/weather-icons.css"/>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <!-- endbuild -->
   </head>
-  <body ng-app="frontendApp">
+  <body ng-app="frontendApp" ng-class="{ 'dark': dark }">
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
     <!-- Add your site or application content here -->
     <div ng-view></div>
-
-
 
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
@@ -70,6 +69,7 @@
         <script src="scripts/controllers/MenuController.js"></script>
         <script src="scripts/controllers/TabController.js"></script>
         <script src="scripts/controllers/RssReaderController.js"></script>
+        <script src="scripts/controllers/WelcomeController.js"></script>
 
         <script src="scripts/directives/MainDirective.js"></script>
         <script src="scripts/directives/LoginDirective.js"></script>

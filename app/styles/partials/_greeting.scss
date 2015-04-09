@@ -2,17 +2,17 @@
   0% {
     opacity: 1;
   }
-  50% {
-    opacity: 1;
+  99% {
+    opacity: 0;
   }
   100% {
     opacity: 0;
-    height: 1px;
+    z-index: -999;
   }
 }
 
 .greeting{
-  -webkit-animation: fade 5s;
+  -webkit-animation: fade 2s;
   -webkit-animation-fill-mode: both;
   width: 100%;
   height: 100%;
@@ -20,8 +20,37 @@
   text-align: center;
   background-color: rgba(15,25,70,0.9);
   color: white;
+
   h1 {
+    -webkit-animation: fade 2s;
+    -webkit-animation-fill-mode: both;
     margin-top: 15%;
     font-size: 110px;
   }
 }
+
+
+// .greeting{
+//   display: none;
+//   &.animate {
+//     -webkit-animation: fade 2s;
+//     -webkit-animation-fill-mode: both;
+//     width: 100%;
+//     height: 100%;
+//     position: fixed;
+//     text-align: center;
+//     background-color: rgba(15,25,70,0.9);
+//     color: white;
+
+//     h1 {
+//       -webkit-animation: fade 2s;
+//       -webkit-animation-fill-mode: both;
+//       margin-top: 15%;
+//       font-size: 110px;
+//   }
+//     }
+//   }
+
+//   h1 {
+//     display: none;
+// }
