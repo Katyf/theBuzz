@@ -18,7 +18,6 @@ angular
     'ngTouch',
     'MainController',
     'MainDirective',
-    'ui.bootstrap'
   ])
     .constant('ServerUrl', 'https://damp-thicket-9341.herokuapp.com')
     .constant('APIUrl', 'http://api.openweathermap.org/data/2.5/weather?q=')
