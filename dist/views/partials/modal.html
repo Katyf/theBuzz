@@ -1,0 +1,12 @@
+<div ng-controller="ModalController"> <script type="text/ng-template" id="myModalContent.html"><div class="modal-header">
+      <h3 class="modal-title">Add Rss Feed</h3>
+    </div>
+
+    <div class="modal-body">
+      <ng-include="'views/partials/new-feed-form.html'"></ng-include>
+    </div>
+
+    <div class="modal-footer">
+      <button class="btn btn-primary" ng-click="ok()">OK</button>
+      <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+    </div></script> <button class="btn btn-default" ng-click="open()">Open me!</button> </div>
