@@ -23,6 +23,15 @@ angular.module('frontendApp').factory('UserFactory', ['$http', 'ServerUrl', func
     });
   };
 
+  var updateLocation = function(location) {
+    setUserId();
+    var params = {setting: location};
+    return $http.$.post(ServerUrl + '/users/' + userId + '/notes', params).success(function(response){
+      console.log(response);
+      console.log('Location updated');
+    });
+  };
+
   var newNote = function(note){
     setUserId();
     //debugger;
@@ -73,6 +82,7 @@ angular.module('frontendApp').factory('UserFactory', ['$http', 'ServerUrl', func
     user: user,
     setUserId: setUserId,
     getUserItems: getUserItems,
+    updateLocation: updateLocation,
     newNote: newNote,
     deleteNote: deleteNote,
     newLink: newLink,

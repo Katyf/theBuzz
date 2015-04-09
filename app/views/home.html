@@ -1,37 +1,44 @@
+<div ng-class="{ 'dark': dark, 'abril' : abril, 'poiret' : poiret, 'merriweather':merriweather }">
+  <nav class="inline">
+    <ng-include src="'views/partials/menu.html'"></ng-include>
+    <ul class="nav nav-pills">
+      <li role="presentation" class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
+          <i class="fa fa-paint-brush"></i><span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu" role="menu">
+          <li><a ng-click="dark=false">Light</a></li>
+          <li><a ng-click="dark=true">Dark</a></li>
+        </ul>
+      </li>
+    </ul>
+    <ul class="nav nav-pills">
+      <li role="presentation" class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
+          <i class="fa fa-font"></i><span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu" role="menu">
+          <li><a ng-click="abril=false;poiret=false;merriweather=false">Default</a></li>
+          <li><a ng-click="abril=true;poiret=false;merriweather=false">Abril</a></li>
+          <li><a ng-click="poiret=true;merriweather=false">Poiret</a></li>
+          <li><a ng-click="merriweather=true;">Merriweather</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
 
-<!-- <ng-include src="'views/greeting.html'"></ng-include>
- -->
-<div ng-class="{ 'dark': dark }">
-<nav class="inline">
-  <ng-include src="'views/partials/menu.html'"></ng-include>
-  <ul class="nav nav-pills">
-    <li role="presentation" class="dropdown">
-      <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
-        <i class="fa fa-paint-brush"></i><span class="caret"></span>
-      </a>
-      <ul class="dropdown-menu" role="menu">
-        <li><a ng-click="dark=false">Light</a></li>
-        <li><a ng-click="dark=true">Dark</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
-
-
-
-<div class="" ng-controller="WeatherController as weatherCtrl">
-  <div class="weather-div">
-    <kf-weather weather="weatherCtrl.currentweather"></kf-weather>
+  <div class="" ng-controller="WeatherController as weatherCtrl">
+    <div class="weather-div">
+      <kf-weather weather="weatherCtrl.currentweather"></kf-weather>
+    </div>
   </div>
-</div>
 
-<br>
+  <br>
 
-<div>
-  <div ng-controller="UserController as userController">
-   <user-items user="userController.user"></user-items>
+  <div>
+    <div ng-controller="UserController as userController">
+      <h1>Hello, {{ userController.user.name }}</h1>
+     <user-items user="userController.user"></user-items>
+    </div>
   </div>
-</div>
-
-<h1>Hello World</h1>
 </div>

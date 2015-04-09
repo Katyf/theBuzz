@@ -21,7 +21,7 @@ angular
     'drag-and-drop',
     'ui.bootstrap'
   ])
-    .constant('ServerUrl', 'http://localhost:3000')
+    .constant('ServerUrl', 'https://damp-thicket-9341.herokuapp.com')
     .constant('APIUrl', 'http://api.openweathermap.org/data/2.5/weather?q=')
     .run(function($rootScope, $http, $window, $location, AuthFactory){
       if(AuthFactory.isAuthenticated()) {
