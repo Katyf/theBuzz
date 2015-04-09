@@ -18,7 +18,6 @@ angular
     'ngTouch',
     'MainController',
     'MainDirective',
-    'drag-and-drop',
     'ui.bootstrap'
   ])
     .constant('ServerUrl', 'https://damp-thicket-9341.herokuapp.com')
