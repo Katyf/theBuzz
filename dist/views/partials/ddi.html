@@ -1,0 +1,1 @@
+<div id="ddi" ng-controller="QuoteController as quoteController"> <h4>DDI</h4> <div ng-repeat="quote in quoteController.quotes | orderBy:randomSort"> <p ng-show="$first">{{quote.body}} - {{quote.author}}</p> </div> </div>
