@@ -1,6 +1,9 @@
-<div class="user-items" ng-controller="UserController as userController">
 
-    <div class="stacked">
+<div class="container-fluid">
+
+<div class="user-items row">
+  <div ng-controller="UserController as userController">
+    <div class="col-md-3">
       <div class="uitem stackitem">
         <button type="button" class="btn btn-xs" aria-label="Left Align" ng-click="shownote = !shownote">
            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
@@ -41,12 +44,18 @@
       </div>
     </div>
 
-    <div class="unstacked">
+    <div class="col-md-6">
       <div class="uitem unstackitem" id="rss-feed">
         <ng-include src="'views/rss-feed.html'"></ng-include>
       </div>
     </div>
 
+     <div class="uitem col-md-3">
+        <ng-include src="'views/partials/ddi.html'"></ng-include>
+      </div>
+
+  </div>
+
 </div>
 
-
+</div>

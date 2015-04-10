@@ -1,9 +1,21 @@
 .dark {
-  background-color:rgba(10,10,10,0.7);
+  background-color:rgba(10,10,10,0.8);
   color: white;
-  &.uitem{
+  & div.uitem{
     background-color: rgba(250,250,250,0.9);
     color: rgba(20,20,20,0.9);
+  }
+  & i.fa {
+    color: white;
+    & span.white {
+      color: white;
+    }
+  }
+  & .glyphicon-cog {
+    color: white;
+    & span.white {
+      color: white;
+    }
   }
 }
 

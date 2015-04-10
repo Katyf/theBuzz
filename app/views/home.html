@@ -4,7 +4,7 @@
     <ul class="nav nav-pills">
       <li role="presentation" class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
-          <i class="fa fa-paint-brush"></i><span class="caret"></span>
+          <i class="fa fa-paint-brush"></i><span class="caret white"></span>
         </a>
         <ul class="dropdown-menu" role="menu">
           <li><a ng-click="dark=false">Light</a></li>
@@ -15,7 +15,7 @@
     <ul class="nav nav-pills">
       <li role="presentation" class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
-          <i class="fa fa-font"></i><span class="caret"></span>
+          <i class="fa fa-font"></i><span class="caret white"></span>
         </a>
         <ul class="dropdown-menu" role="menu">
           <li><a ng-click="abril=false;poiret=false;merriweather=false">Default</a></li>
@@ -36,9 +36,18 @@
   <br>
 
   <div>
+
+  <div class="time" ng-controller="TimeController">
+    <h1>{{ clock | date: 'HH:mm'}}</h1>
+    {{ clock | date: 'MMM dd yyyy'}}
+  </div>
     <div ng-controller="UserController as userController">
       <h1>Hello, {{ userController.user.name }}</h1>
      <user-items user="userController.user"></user-items>
     </div>
+
+
   </div>
 </div>
+
+

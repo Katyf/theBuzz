@@ -2,9 +2,10 @@
 
 angular.module('MainController').controller('HomeController', homeController);
 
-homeController.$inject = ['WeatherFactory', 'UserFactory'];
+homeController.$inject = ['WeatherFactory', 'UserFactory', 'QuoteFactory'];
 
-function homeController(WeatherFactory, UserFactory) {
+function homeController(WeatherFactory, UserFactory, QuoteFactory) {
   WeatherFactory.getWeather();
   UserFactory.getUserItems();
+  QuoteFactory.getQuotes();
 }

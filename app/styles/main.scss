@@ -7,11 +7,28 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 @import "partials/login";
 @import "partials/weather";
 @import "partials/useritem";
-// @import "partials/weather-icons";
+@import "partials/ddi";
+
+//global
+
+a {
+  color: rgba(50,50,50,0.9);
+}
+a:hover {
+  color: white;
+  background-color: black;
+}
+
+.time {
+  text-align: center;
+}
 
 h1 {
   text-align: center;
-  margin: 20px 0 50px 0;
+}
+
+h3 {
+
 }
 
 nav {
@@ -19,12 +36,6 @@ nav {
   display: inline-block;
 }
 
-.browsehappy {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
-}
 
 .home {
   height: 100vh;
@@ -33,6 +44,9 @@ nav {
 body {
   padding: 0px;
   font-family: 'Lato', sans-serf;
+  background-image: url(../images/bg.png);
+  color: rgba(10,10,10,0.9);
+  border-color: none;
 }
 
 /* Responsive: Portrait tablets and up */
