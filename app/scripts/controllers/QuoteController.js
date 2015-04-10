@@ -8,4 +8,9 @@ function quoteController(QuoteFactory) {
   var vm = this;
   vm.quotes = QuoteFactory.quotes;
 
+  vm.getQuotes = function(){
+    debugger;
+    QuoteFactory.getQuotes();
+  };
+
 }
