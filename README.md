@@ -1,12 +1,6 @@
-# frontend
+# theBuzz
 
-This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
-version 0.11.1.
+This project was created for GA's Web Development Immersive Course.
 
-## Build & development
+Inspired by a popular chrome extension called Momentum, theBuzz is meant to be your first stop online, where you can jot down notes, save quick links, check the weather, and browse the net by pulling in RSS feeds from your favorite websites. theBuzz focused on an AngularJS frontend, with a modest rails backend. Not to mention, it's fully customizable with different color themes and fonts, and its responsive design looks pretty good on a phone!
 
-Run `grunt` for building and `grunt serve` for preview.
-
-## Testing
-
-Running `grunt test` will run the unit tests with karma.
