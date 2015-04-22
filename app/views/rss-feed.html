@@ -4,22 +4,30 @@
       <form>
         <div class="input-prepend span12">
           <div class="btn-group">
-            <ul class="nav nav-pills" id="rss-dropdown">
+            <ul class="nav nav-pills">
               <li>
-                <a class="btn btn-info" href="#" ng-click="rssReaderController.loadFeed($event,'http://feeds.huffingtonpost.com/huffingtonpost/raw_feed')">In the Know</a></li>
+                <a class="btn btn-info" href="#" ng-click="rssReaderController.loadFeed($event,'http://feeds.huffingtonpost.com/huffingtonpost/raw_feed')">Huffington Post</a></li>
               <li>
-                <a class="btn btn-success"href="#" ng-click="rssReaderController.loadFeed($event,'http://www.buzzfeed.com/lol.xml')">Lols</a></li>
-              <li ng-repeat="userfeed in rssReaderController.user.feeds" ng-hide="removefeed">
-                <a class ="user-feed btn btn-warning" href="#" ng-click="rssReaderController.loadFeed($event,'{{userfeed.url}}')">{{ userfeed.name }} | {{userfeed.category}}
-                  <button type="button" class="btn btn-xs btn-info rssbtn">
-                    <span class="glyphicon glyphicon-minus"></span>
-                  </button></a></li>
-              <li>
+                <a class="btn btn-success"href="#" ng-click="rssReaderController.loadFeed($event,'http://www.buzzfeed.com/lol.xml')">Buzzfeed Lols</a></li>
+              <li><div class="btn-group">
+                  <a class="btn btn-warning" type="button" tabindex="-1">Your Feeds</a>
+                  <a class="btn btn-warning dropdown-toggle" data-toggle="dropdown" tabindex="-1"><span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li ng-repeat="userfeed in rssReaderController.user.feeds" ng-hide="removefeed">
+                    <a class ="user-feed" href="#" ng-click="rssReaderController.loadFeed($event,'{{userfeed.url}}')">{{ userfeed.name }}
+                    <button type="button" class="btn btn-xs btn-info rssbtn">
+                      <span class="glyphicon glyphicon-minus"></span>
+                    </button></a></li>
+                  </ul>
+                </div>
+              </li>
+
+              <!-- <li>
                 <a class="user-feed" href="#">&nbsp;
                   <button type="button" class="btn btn-xs btn-info rssbtn" ng-click="showfeedform = !showfeedform">
                   <span class="glyphicon glyphicon-plus"></span></button>
                   <span ng-show="showfeedform"><ng-include src="'views/partials/new-feed-form.html'"></ng-include></span></a>
-              </li>
+              </li> -->
             </ul>
 
           </div>
@@ -38,5 +46,6 @@
       </ul>
     </div>
   </div>
+
 
 

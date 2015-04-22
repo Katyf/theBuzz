@@ -1,4 +1,4 @@
-<div class="home" ng-class="{ 'dark': dark, 'abril' : abril, 'poiret' : poiret, 'merriweather':merriweather }">
+<div class="home" ng-class="{ 'dark': dark, 'abril' : abril, 'poiret' : poiret, 'merriweather':merriweather, 'sunset': sunset, 'forest': forest }">
   <nav class="inline">
     <ng-include src="'views/partials/menu.html'"></ng-include>
     <ul class="nav nav-pills">
@@ -7,8 +7,10 @@
           <i class="fa fa-paint-brush"></i><span class="caret white"></span>
         </a>
         <ul class="dropdown-menu" role="menu">
-          <li><a ng-click="dark=false">Light</a></li>
-          <li><a ng-click="dark=true">Dark</a></li>
+          <li><a ng-click="dark=false;sunset=false;forest=false">Light</a></li>
+          <li><a ng-click="dark=true;sunset=false;forest=false">Dark</a></li>
+          <li><a ng-click="sunset=true;dark=false;forest=false">Sunset</a></li>
+          <li><a ng-click="forest=true;sunset=false;dark=false">Forest</a></li>
         </ul>
       </li>
     </ul>
@@ -42,7 +44,7 @@
     {{ clock | date: 'MMM dd yyyy'}}
   </div>
     <div ng-controller="UserController as userController">
-      <h1>Hello, {{ userController.user.name }}</h1>
+      <h1><span ng-controller="TimeController">{{ clock | date: 'HH' | timeFilter }}</span>, {{ userController.user.name }}</h1>
      <user-items user="userController.user"></user-items>
     </div>
 

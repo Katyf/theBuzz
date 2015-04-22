@@ -11,9 +11,10 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 
 //global
 
-a {
-  //color: rgba(50,50,50,0.9);
+.btn-warning {
+  padding: 10px 35px;
 }
+
 a:hover {
   color: white;
   background-color: black;
@@ -21,6 +22,7 @@ a:hover {
 
 .time {
   text-align: center;
+  margin-top: -20px;
 }
 
 h1 {

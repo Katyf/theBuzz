@@ -17,3 +17,4 @@ function weatherController(WeatherFactory, UserFactory) {
     });
   };
 }
+

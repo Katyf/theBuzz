@@ -30,3 +30,30 @@
 .merriweather {
   font-family: 'Merriweather', serif;
 }
+
+.sunset {
+  background-image: url(../../images/sunset.jpg);
+  background-size: cover;
+}
+
+.forest {
+  background-image: url(../../images/forest.jpg);
+  background-size: cover;
+  color: white;
+  & div.uitem{
+    background-color: rgba(250,250,250,0.9);
+    color: rgba(20,20,20,0.9);
+  }
+  & i.fa {
+    color: white;
+    & span.white {
+      color: white;
+    }
+  }
+  & .glyphicon-cog {
+    color: white;
+    & span.white {
+      color: white;
+    }
+  }
+}
