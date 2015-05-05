@@ -20,7 +20,7 @@ angular
     'MainDirective',
   ])
     .constant('ServerUrl', 'https://damp-thicket-9341.herokuapp.com')
-    .constant('APIUrl', 'http://api.openweathermap.org/data/2.5/weather?q=')
+    .constant('APIUrl', 'http://api.openweathermap.org/data/2.5/weather?zip=')
     .run(function($rootScope, $http, $window, $location, AuthFactory){
       if(AuthFactory.isAuthenticated()) {
         var data = JSON.parse($window.localStorage.getItem('ga-user'));

@@ -14,6 +14,8 @@
         } else {
           return 'cloudy';
         }
+      } else {
+        return 'day-sunny';
       }
     };
   }
