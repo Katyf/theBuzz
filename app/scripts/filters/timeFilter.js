@@ -9,7 +9,7 @@
       if (param) {
         if (param < 12) {
           return 'Good Morning';
-        } else if (param < 15) {
+        } else if (param < 16) {
           return 'Good Afternoon';
         } else {
           return 'Good Evening';

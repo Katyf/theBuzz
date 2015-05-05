@@ -32,7 +32,7 @@
       <ul class="unstyled">
         <span class="badge badge-warning" ng-show="feeds.length > 0">{{(feeds | filter:filterText).length}} Items</span>
         <li ng-repeat="feed in feeds | filter:filterText">
-          <h5><a href="{{feed.link}}">{{feed.title}}</a></h5>
+          <h5><a href="{{feed.link}}" target="_blank">{{feed.title}}</a></h5>
           <p class="text-left">{{feed.contentSnippet | xmlFilter }}</p>
           <span class="small">{{feed.publishedDate}}</span>
         </li>

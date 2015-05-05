@@ -1,16 +1,16 @@
 .weather-div {
-  float: right;
-  margin-top: -30px;
-  margin-right: 30px;
   font-size: 25px;
-  line-height: 30px;
-  p {
-    line-height: 10px;
-  }
+  position: absolute;
+  right: 5px;
+  top: 20px;
+  line-height: 20px;
 }
 
 #main-icon {
   float: left;
   margin-right: 10px;
-  margin-top: 2px;
+}
+
+.city {
+  margin-top: 3px;
 }
