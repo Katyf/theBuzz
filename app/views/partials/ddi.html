@@ -4,6 +4,6 @@
     <div ng-repeat="quote in quoteController.quotes | orderBy:randomSort">
       <p ng-show="$first">{{quote.body}} - {{quote.author}}</p>
     </div>
-    <button class="btn btn-info" ng-click="quoteController.getQuotes()"> next </button>
+    <button class="btn btn-info" ng-click="quoteController.getQuotes()"> close </button>
   </div>
 </div>
