@@ -1,0 +1,8 @@
+ <div ng-show="shownote" class="inner">
+  <h2>Notes</h2>
+  <p class="note-link" ng-repeat="note in userController.user.notes" ng-hide="removenote">
+    <button type="button" class="btn btn-xs delete-btn" ng-click="userController.deleteNote(note); removenote = true">
+      <span class="glyphicon glyphicon-minus"></span>
+    </button>{{ note.body }}</p>
+  <ng-include src="'views/partials/new-note-form.html'"></ng-include>
+</div>

@@ -1,0 +1,10 @@
+<div ng-show="showlink" class="inner">
+  <h2>Links</h2>
+          <p class="note-link" ng-repeat="link in userController.user.links" ng-hide="removelink">
+            <button type="button" class="btn btn-xs delete-btn" ng-click="userController.deleteLink(link); removelink = true">
+              <span class="glyphicon glyphicon-minus"></span>
+            </button>
+            <a href="http://{{link.url}}" target="_blank">{{ link.url | urlFilter }}</a>
+          </p>
+          <ng-include src="'views/partials/new-link-form.html'"></ng-include>
+        </div>

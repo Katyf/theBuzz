@@ -18,16 +18,9 @@
 
 }
 
-.stacked {
-    display: inline-block;
-  .stackitem {
-    margin: 0;
-    overflow: hidden;
-  }
-}
-
 .uitem {
   background-color: rgba(250,250,250,0.9);
+  max-height: 550px;
   .inner {
     max-height: 350px;
     overflow: scroll;
@@ -54,8 +47,11 @@
   }
   p.user-feed {
   padding-left:20px;
+  }
 }
 
+.right {
+    float: right;
 }
 
 #ddi {

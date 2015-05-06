@@ -1,0 +1,7 @@
+<div ng-show="showfeed" class="inner">
+  <h2>Feeds</h2>
+    <div ng-repeat="feed in userController.user.feeds" ng-hide="removefeed">
+      <p>{{ feed.name }} | {{feed.category}}</p><p> {{feed.url | limitTo: 20 }}... <a class="btn btn-xs delete-btn" ng-click="userController.deleteFeed(feed); removefeed = true"><span class="glyphicon glyphicon-minus"></span></a></p>
+    </div>
+  <ng-include src="'views/partials/new-feed-form.html'" ng-show="showfeed"></ng-include>
+</div>
