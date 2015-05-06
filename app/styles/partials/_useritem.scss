@@ -29,7 +29,7 @@
 .uitem {
   background-color: rgba(250,250,250,0.9);
   .inner {
-    max-height: 300px;
+    max-height: 350px;
     overflow: scroll;
     font-size: 80%;
   }
@@ -56,4 +56,10 @@
   padding-left:20px;
 }
 
+}
+
+#ddi {
+  p {
+    font-size: 11px;
+  }
 }
